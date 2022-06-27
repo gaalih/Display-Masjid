@@ -10,7 +10,7 @@ const JadwalSholat = () => {
             alt="Shoes"
           />
         </figure>
-        <div className="card-body font-bold">
+        <div className="card-body p-1 pb-5 text-cyan-900 font-bold">
           <h1 className="card-title text-2xl justify-center">Subuh</h1>
           <h1 className="justify-center text-5xl text-center font-extrabold">
             17:30
@@ -22,7 +22,7 @@ const JadwalSholat = () => {
         <figure>
           <img src={require("../assets/img/img-cover/dhuha.jpg")} alt="Shoes" />
         </figure>
-        <div className="card-body font-bold">
+        <div className="card-body p-1 pb-5 text-cyan-900 font-bold">
           <h1 className="card-title text-2xl justify-center">Dhuha</h1>
           <h1 className="justify-center text-5xl text-center font-extrabold">
             17:30
@@ -37,7 +37,7 @@ const JadwalSholat = () => {
             alt="Shoes"
           />
         </figure>
-        <div className="card-body font-bold">
+        <div className="card-body p-1 pb-5 text-cyan-900 font-bold">
           <h1 className="card-title text-2xl justify-center">Dzuhur</h1>
           <h1 className="justify-center text-5xl text-center font-extrabold">
             17:30
@@ -49,7 +49,7 @@ const JadwalSholat = () => {
         <figure>
           <img src={require("../assets/img/img-cover/ashar.jpg")} alt="Shoes" />
         </figure>
-        <div className="card-body font-bold">
+        <div className="card-body p-1 pb-5 text-cyan-900 font-bold">
           <h1 className="card-title text-2xl justify-center">Ashar</h1>
           <h1 className="justify-center text-5xl text-center font-extrabold">
             17:30
@@ -64,7 +64,7 @@ const JadwalSholat = () => {
             alt="Shoes"
           />
         </figure>
-        <div className="card-body font-bold">
+        <div className="card-body p-1 pb-5 text-cyan-900 font-bold">
           <h1 className="card-title text-2xl justify-center">Maghrib</h1>
           <h1 className="justify-center text-5xl text-center font-extrabold">
             17:30
@@ -76,7 +76,7 @@ const JadwalSholat = () => {
         <figure>
           <img src={require("../assets/img/img-cover/isya.jpg")} alt="Shoes" />
         </figure>
-        <div className="card-body font-bold text-center justify-center">
+        <div className="card-body p-1 pb-5 text-cyan-900 font-bold text-center justify-center">
           <h1 className="card-title text-2xl justify-center">Isya'</h1>
           <h1 className="justify-center text-5xl text-center font-extrabold">
             17:30

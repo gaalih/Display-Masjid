@@ -1,3 +1,13 @@
+# Aplikasi Display Masjid
+
+merupakan aplikasi yang digunakan untuk menampilkan jadwal sholat dan kegiatan lain yang dilakukan di masjid.
+
+### Teknologi :
+
+- React.js
+- TailwindCSS
+- DaisyUI
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
