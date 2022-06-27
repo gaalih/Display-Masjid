@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-blue-400;
+  background-image: url("../img/bg-masjid-siang-002.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.content {
+  @apply mx-auto;
+  width: 100%;
+  height: 100vh;
+}
