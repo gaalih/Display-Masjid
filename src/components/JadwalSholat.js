@@ -6,7 +6,7 @@ const JadwalSholat = () => {
       <div className="card bg-base-100 shadow-xl scale-75 hover:scale-100 transition duration-500 ease-in-out">
         <figure>
           <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
+            src={require("../assets/img/img-cover/shubuh.jpg")}
             alt="Shoes"
           />
         </figure>
@@ -20,10 +20,7 @@ const JadwalSholat = () => {
       {/* waktu       */}
       <div className="card bg-base-100 shadow-xl scale-75 hover:scale-100 transition duration-500 ease-in-out">
         <figure>
-          <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
-            alt="Shoes"
-          />
+          <img src={require("../assets/img/img-cover/dhuha.jpg")} alt="Shoes" />
         </figure>
         <div className="card-body font-bold">
           <h1 className="card-title text-2xl justify-center">Dhuha</h1>
@@ -36,7 +33,7 @@ const JadwalSholat = () => {
       <div className="card bg-base-100 shadow-xl scale-75 hover:scale-100 transition duration-500 ease-in-out">
         <figure>
           <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
+            src={require("../assets/img/img-cover/dzuhur.jpg")}
             alt="Shoes"
           />
         </figure>
@@ -50,10 +47,7 @@ const JadwalSholat = () => {
       {/* waktu       */}
       <div className="card bg-base-100 shadow-xl scale-75 hover:scale-100 transition duration-500 ease-in-out">
         <figure>
-          <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
-            alt="Shoes"
-          />
+          <img src={require("../assets/img/img-cover/ashar.jpg")} alt="Shoes" />
         </figure>
         <div className="card-body font-bold">
           <h1 className="card-title text-2xl justify-center">Ashar</h1>
@@ -66,7 +60,7 @@ const JadwalSholat = () => {
       <div className="card bg-base-100 shadow-xl scale-75 hover:scale-100 transition duration-500 ease-in-out">
         <figure>
           <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
+            src={require("../assets/img/img-cover/maghrib.jpg")}
             alt="Shoes"
           />
         </figure>
@@ -80,10 +74,7 @@ const JadwalSholat = () => {
       {/* waktu       */}
       <div className="card bg-base-100 shadow-xl scale-75 hover:scale-100 transition duration-500 ease-in-out">
         <figure>
-          <img
-            src="https://api.lorem.space/image/shoes?w=400&h=225"
-            alt="Shoes"
-          />
+          <img src={require("../assets/img/img-cover/isya.jpg")} alt="Shoes" />
         </figure>
         <div className="card-body font-bold text-center justify-center">
           <h1 className="card-title text-2xl justify-center">Isya'</h1>

@@ -9,11 +9,11 @@ import JadwalSholat from "./components/JadwalSholat";
 const App = () => {
   // document.body.classList.add("bg-slate-200");
   return (
-    <div className="content static p-4 backdrop-opacity-10 bg-white/5">
+    <div className="content relative p-4 backdrop-opacity-10 bg-white/5">
       <header></header>
       <section></section>
       section jadwal sholat
-      <section className="relative -bottom-72 mx-auto z-10">
+      <section className="absolute bottom-4 right-4 left-4 mx-auto z-10">
         <JadwalSholat className="self-center" />
       </section>
     </div>
