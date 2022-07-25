@@ -1,5 +1,78 @@
 // ini adalah contoh kasus functional components
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
 const JadwalSholat = () => {
+  const [getJadwalSholat, setJadwalSholat] = useState([]);
+  const [getHariHijriyah, setHariHijriyah] = useState([]);
+  var months = [
+    "Januari",
+    "Februari",
+    "Maret",
+    "April",
+    "Mei",
+    "Juni",
+    "Juli",
+    "Agustus",
+    "September",
+    "Oktober",
+    "November",
+    "Desember",
+  ];
+  const current = new Date();
+
+  const date_number = `${current.getFullYear()}-${(
+    "0" +
+    (current.getMonth() + 1)
+  ).slice(-2)}-${current.getDate()} `;
+
+  const date = `${current.getDate()} ${
+    months[current.getMonth() + 1]
+  } ${current.getFullYear()}`;
+
+  const kodeKota = 680;
+
+  const getWaktu = async () => {
+    const jadwalSholat = await fetch(
+      "https://api.banghasan.com/sholat/format/json/jadwal/kota/" +
+        kodeKota +
+        "/tanggal/" +
+        date_number
+    );
+    const value = await jadwalSholat.json();
+    const status = value.status;
+    const result = value.jadwal.data;
+    setJadwalSholat(result);
+    return result;
+    // console.log(status);
+    // console.log(result);
+  };
+
+  const getHijriyah = async () => {
+    const dateToHijriyah = `${current.getDate()}-${current.getMonth()}-${current.getFullYear()}`;
+    // const hijriyah = await fetch(
+    //   "https://api.flagodna.com/hijriyah/api/" + dateToHijriyah,
+    //   { mode: "cors" }
+    // );
+
+    // const result = await hijriyah.json();
+    // setHariHijriyah(result);
+    // console.log(result);
+    // return result;
+
+    axios
+      .get("https://api.flagodna.com/hijriyah/api/" + dateToHijriyah)
+      .then((response) => {
+        setHariHijriyah(response);
+        return response;
+      });
+  };
+
+  useEffect(() => {
+    getWaktu();
+    getHijriyah();
+  }, []);
+
   return (
     <div className="kotak-jadwal grid w-full grid-cols-7 gap-0 ">
       {/* waktu       */}
@@ -14,7 +87,8 @@ const JadwalSholat = () => {
         <div className="card-body p-0 py-3 p-1 pb-5 text-cyan-900 font-bold">
           <h1 className="card-title text-1xl justify-center">Imsak</h1>
           <h1 className="justify-center text-4xl text-center font-extrabold">
-            17:30
+            {/* {getHariHijriyah.tanggal_hijriyah} */}
+            {getJadwalSholat.imsak}
           </h1>
         </div>
       </div>
@@ -30,7 +104,7 @@ const JadwalSholat = () => {
         <div className="card-body p-0 py-3 p-1 pb-5 text-cyan-900 font-bold">
           <h1 className="card-title text-1xl justify-center">Subuh</h1>
           <h1 className="justify-center text-4xl text-center font-extrabold">
-            17:30
+            {getJadwalSholat.subuh}
           </h1>
         </div>
       </div>
@@ -46,7 +120,7 @@ const JadwalSholat = () => {
         <div className="card-body p-0 py-3 p-1 pb-5 text-cyan-900 font-bold">
           <h1 className="card-title text-1xl justify-center">Dhuha</h1>
           <h1 className="justify-center text-4xl text-center font-extrabold">
-            17:30
+            {getJadwalSholat.dhuha}
           </h1>
         </div>
       </div>
@@ -62,7 +136,7 @@ const JadwalSholat = () => {
         <div className="card-body p-0 py-3 p-1 pb-5 text-cyan-900 font-bold">
           <h1 className="card-title text-1xl justify-center">Dzuhur</h1>
           <h1 className="justify-center text-4xl text-center font-extrabold">
-            17:30
+            {getJadwalSholat.dzuhur}
           </h1>
         </div>
       </div>
@@ -78,7 +152,7 @@ const JadwalSholat = () => {
         <div className="card-body p-0 py-3 p-1 pb-5 text-cyan-900 font-bold">
           <h1 className="card-title text-1xl justify-center">Ashar</h1>
           <h1 className="justify-center text-4xl text-center font-extrabold">
-            17:30
+            {getJadwalSholat.ashar}
           </h1>
         </div>
       </div>
@@ -94,7 +168,7 @@ const JadwalSholat = () => {
         <div className="card-body p-0 py-3 text-cyan-900 font-bold">
           <h1 className="card-title text-1xl justify-center">Maghrib</h1>
           <h1 className="justify-center text-4xl text-center font-extrabold">
-            17:30
+            {getJadwalSholat.maghrib}
           </h1>
         </div>
       </div>
@@ -110,7 +184,7 @@ const JadwalSholat = () => {
         <div className="card-body p-0 py-3 text-cyan-900 font-bold">
           <h1 className="card-title text-1xl justify-center">Isya'</h1>
           <h1 className="justify-center text-4xl text-center font-extrabold">
-            17:30
+            {getJadwalSholat.isya}
           </h1>
         </div>
       </div>

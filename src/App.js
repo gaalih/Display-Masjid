@@ -1,6 +1,10 @@
 import "./assets/css/style.css";
 import JadwalSholat from "./components/JadwalSholat";
 import Jam from "./components/Jam";
+// import Waktu from "./components/Waktu";
+import Iqomah from "./components/Iqomah";
+// import axios from "axios";
+
 // import Content from "./components/Content";
 
 // function standar
@@ -8,6 +12,17 @@ import Jam from "./components/Jam";
 
 //arrow function
 const App = () => {
+  // async function getUser() {
+  //   try {
+  //     const response = await axios.get(
+  //       "api.banghasan.com/sholat/format/json/jadwal/kota/680/tanggal/2017-02-07"
+  //     );
+  //     console.log(response);
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // }
+
   // document.body.classList.add("bg-slate-200");
   return (
     <div className="main relative h-screen top-0 right-0 bottom-0 z-0 left-0 bg-gradient-to-r from-indigo-400 via-blue-400 to-blue-700">
@@ -24,6 +39,8 @@ const App = () => {
         <section></section>
         <section className="fixed bottom-4 right-4 left-4 mx-auto z-30">
           <Jam />
+          {/* <Waktu /> */}
+          <Iqomah />
           <JadwalSholat className="self-center" />
         </section>
       </div>

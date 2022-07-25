@@ -1,4 +1,5 @@
 // ini adalah contoh kasus  class components
+// rafce (menggunakan extension ES7 React)
 import React from "react";
 
 class Content extends React.Component {
